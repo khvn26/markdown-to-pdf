@@ -6,4 +6,4 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: "ghcr.io/khvn26/markdown-to-pdf/markdown-to-pdf:${TAG:-latest}"
+    image: "ghcr.io/khvn26/markdown-to-pdf:${TAG:-latest}"
