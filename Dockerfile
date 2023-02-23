@@ -10,6 +10,9 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
     libxtst6 ca-certificates fonts-liberation libnss3 lsb-release xdg-utils wget curl google-chrome-stable \
     fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf && \
     rm -rf /var/lib/apt/lists/*
+RUN wget https://github.com/github/mona-sans/releases/download/v1.0/Mona.Sans.1.0.zip && \
+    unzip Mona.Sans.1.0.zip && \
+    mv "./Mona Sans/Mona-Sans.ttf" /usr/local/share/fonts/
 
 COPY src/*.js /
 COPY package.json /
